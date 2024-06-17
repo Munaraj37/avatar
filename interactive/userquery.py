@@ -64,7 +64,7 @@ def get_hotel_index(query: str):
 
 if __name__ == "__main__":
 
-    query = "What is the cost of the single account?"
+    query = "What are the various account avaiable in Rabobank?"
     input_text = get_hotel_index(query)
 #    print(input_text)
     client = openai.AzureOpenAI(azure_endpoint=azure_openai_endpoint,api_key=azure_openai_api_key,api_version="2024-02-01",)

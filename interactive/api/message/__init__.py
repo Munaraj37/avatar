@@ -35,8 +35,8 @@ place_orders = False
 
 functions = [
     {
-        "name": "get_bonus_points",
-        "description": "Check the amount of customer bonus / loyalty points",
+        "name": "open_checking_account",
+        "description": "Open checking accounts based on the provided parameters",
         "parameters": {
             "type": "object",
             "properties": {
@@ -49,8 +49,8 @@ functions = [
         }
     },
     {
-        "name": "get_order_details",
-        "description": "Check customer account for expected delivery date of existing orders based on the provided parameters",
+        "name": "open_savings_account",
+        "description": "Open savings accounts based on the provided parameters",
         "parameters": {
             "type": "object",
             "properties": {
@@ -63,8 +63,8 @@ functions = [
         }
     },
     {
-        "name": "order_product",
-        "description": "Order a product based on the provided parameters",
+        "name": "open_investment_Account",
+        "description": "Open investment accounts based on the provided parameters",
         "parameters": {
             "type": "object",
             "properties": {
@@ -86,13 +86,13 @@ functions = [
     },
         {
         "name": "get_product_information",
-        "description": "Find information about a product based on a user question. Use only if the requested information if not already available in the conversation context.",
+        "description": "Find information about a product based on a user question. Any information related to rabobank product should call this function. Use only if the requested information if not already available in the conversation context.",
         "parameters": {
             "type": "object",
             "properties": {
                 "user_question": {
                     "type": "string",
-                    "description": "User question (i.e., Can you explain various product available in Rabobank?, etc.)"
+                    "description": "User question (i.e., Can you explain various product available in Rabobank?, What is the cost of the Current Account?, etc.)"
                 },
             },
             "required": ["user_question"],
