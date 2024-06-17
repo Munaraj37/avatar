@@ -92,7 +92,7 @@ functions = [
             "properties": {
                 "user_question": {
                     "type": "string",
-                    "description": "User question (i.e., do you have tennis shoes for men?, etc.)"
+                    "description": "User question (i.e., Can you explain various account available in Rabobank?, etc.)"
                 },
             },
             "required": ["user_question"],
