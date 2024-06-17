@@ -92,7 +92,7 @@ functions = [
             "properties": {
                 "user_question": {
                     "type": "string",
-                    "description": "User question (i.e., Can you explain various account available in Rabobank?, etc.)"
+                    "description": "User question (i.e., Can you explain various product available in Rabobank?, etc.)"
                 },
             },
             "required": ["user_question"],
@@ -141,16 +141,16 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
             "content": None
         })
 
-        if function_to_call == get_product_information:
-            product_info = json.loads(function_response)
+        #if function_to_call == get_product_information:
+        #    product_info = json.loads(function_response)
             # show product information after search for a different product that the current one
             # if product_info['product_image_file'] != current_product_image:
                 
-            products = [display_product_info(product_info)]
-            current_product_image = product_info['product_image_file']
+        #    products = [display_product_info(product_info)]
+        #    current_product_image = product_info['product_image_file']
             
             # return only product description to LLM to avoid chatting about prices and image files 
-            function_response = product_info['description']
+        #    function_response = product_info['description']
 
         messages.append({
             "role": "function",
