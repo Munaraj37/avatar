@@ -176,7 +176,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         second_response = chat_complete(messages, tools= tools, tool_choice='auto')
         response_message = second_response.choices[0].message.content
         
-    messages.append({'role' : response_message.role, 'content' : response_message.content})
+    messages.append({'role' : second_response.choices[0].message.role, 'content' : second_response.choices[0].message.content})
     #logging.info(json.dumps(response_message))
 
     response_object = {"messages": messages}
