@@ -66,20 +66,8 @@ if __name__ == "__main__":
 
     query = "What are the various account avaiable in Rabobank?"
     input_text = get_hotel_index(query)
-#    print(input_text)
     client = openai.AzureOpenAI(azure_endpoint=azure_openai_endpoint,api_key=azure_openai_api_key,api_version="2024-02-01",)
-#    completion = client.completions.create(
-#        model = azure_openai_deployment_name,
-#        prompt = f"Answer Input:{input_text}. Question:{query}",
-        #max_tokens=10,
-        #top_p=1,
-        #frequency_penalty=0,
-        #presence_penalty=0
-#    )     
-
-    #print(input_text)
-    #print(query)
-
+    
     completion = client.chat.completions.create(
     model=azure_openai_deployment_name,
     messages=[
