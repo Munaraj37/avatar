@@ -5,6 +5,8 @@ import requests
 from datetime import datetime, timedelta
 import pyodbc
 import azure.functions as func
+from openai import AzureOpenAI
+
 
 search_endpoint = os.getenv("AZURE_SEARCH_ENDPOINT")
 search_key = os.getenv("AZURE_SEARCH_API_KEY") 
