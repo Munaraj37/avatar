@@ -9,7 +9,7 @@ endpoint = os.getenv("TEXT_ANALYTICS_ENDPOINT")
 subscription_key = os.getenv("TEXT_ANALYTICS_KEY")
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
-    '''    
+   
     apiUrl = f'{endpoint}/text/analytics/v3.2-preview.1/languages'
     text = req.params.get('text')
 
@@ -53,6 +53,6 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     else:
         return func.HttpResponse(response.status_code)
         
-    '''
 
-    return func.HttpResponse('en-US', status_code=200)
+
+    #return func.HttpResponse('en-US', status_code=200)
